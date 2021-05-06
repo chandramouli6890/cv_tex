@@ -1,0 +1,7 @@
+# ignore latex aux files
+*.aux
+*.out
+*.log
+*.bbl
+*.blg
+*.synctec.gz

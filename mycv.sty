@@ -1,0 +1,82 @@
+% SOME GENERAL PACKAGES -------------------------------------------------------
+\usepackage[margin=1.0cm, a4paper]{geometry}
+\setlength{\parindent}{0cm} % set para indentation
+%\renewcommand{\baselinestretch}{1.5}
+\linespread{1.6}
+\usepackage{lipsum}
+\usepackage{paracol}
+\usepackage{tikz}
+\usepackage{etoolbox}
+\usepackage{graphicx}
+\usepackage{ragged2e}
+
+% DEFINING TEMPLATE COLORS ----------------------------------------------------
+\usepackage{xcolor}
+\definecolor{templateColor1}{RGB}{61,61,61}
+\definecolor{templateColor2}{RGB}{255,151,0}
+
+% FONT CATALOGUES -------------------------------------------------------------
+% https://tug.org/FontCatalogue/
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[scaled]{berasans}
+\renewcommand*\familydefault{\sfdefault} %Only if base font of document is sans serif
+
+% PDF AS BACKGROUND------------------------------------------------------------
+\usepackage{eso-pic}
+\newcommand\BackgroundPic{ 
+	\put(-5,0){
+		\parbox[b][\paperheight]{\paperwidth}{%
+			\vfill
+	    \includegraphics[width=1.0\paperwidth,height=1.0\paperheight]{Background.pdf}
+	    \vfill
+		}
+  }
+}
+
+% DEFINING SOME VARIABLES -----------------------------------------------------
+\newcommand{\ulinespace}{10pt}
+\newcommand{\ulinewidth}{1.0pt}
+
+% CUSTOM SECTION --------------------------------------------------------
+% purely using \newcommands
+\newcommand{\lcoluline}{
+	{\color{templateColor1}\rule[\ulinespace]{0.14\textwidth}{\ulinewidth}}\noindent
+  {\color{templateColor2}\rule[\ulinespace]{0.149\textwidth}{\ulinewidth}}
+}
+
+\newcommand{\rcoluline}{
+	{\color{templateColor2}\rule[\ulinespace]{0.42\textwidth}{\ulinewidth}}\noindent
+  {\color{templateColor1}\rule[\ulinespace]{0.24\textwidth}{\ulinewidth}}
+}
+
+%\newcommand{\lsection}[1]
+%{\noindent\begin{flushright}\vspace{-1.1mm}\Large{#1 \hspace*{5pt}}\end{flushright}\lcoluline}
+\newcommand{\lsection}[1]
+{{\RaggedLeft\Large{#1}\\} \lcoluline}
+\newcommand{\rsection}[1]
+{{\RaggedRight \Large{#1}\\} \rcoluline}
+%\newcommand{\rsection}[1]
+%{\noindent\begin{flushleft}\vspace{-1.1mm}\Large{#1}\end{flushleft}\rcoluline}
+
+% REDEFINE SECTION ------------------------------------------------------------
+% inspired from the following stackExchange post which uses TITLESEC pkg
+% https://tex.stackexchange.com/questions/483919/how-to-get-custom-section-style-using-titlesec
+\usepackage[explicit]{titlesec}
+\newrobustcmd*{\mytriangle}[1]{\tikz{\filldraw[draw=#1,fill=#1] (0,0) --
+(0mm,4.0mm) -- (2.0mm,2.0mm);}}
+
+%\titleformat{\section}[hang]{\Large\sffamily}%
+%{\rlap{\color{templateColor2}\rule[-5pt]{0.4\textwidth}{\ulinewidth}\noindent
+%\color{templateColor1}\rule[-5pt]{0.6\textwidth}{\ulinewidth}}
+%}
+%{0pt}
+%{#1}
+%\titlespacing*{\section}{0mm}{1mm}{5mm}
+
+\titleformat{\subsection}[hang]{\large\sffamily}%
+{\rlap{\begin{picture}(10,10)\put(-10,-2){\mytriangle{templateColor1}}\end{picture}}}
+{5pt}
+{#1}
+\titlespacing*{\subsection}{0mm}{2mm}{2mm}
+% -----------------------------------------------------------------------------
