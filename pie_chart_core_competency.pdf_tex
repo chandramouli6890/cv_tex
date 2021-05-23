@@ -1,0 +1,64 @@
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'pie_chart_core_competency.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{176.41913827bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.7934621)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{pie_chart_core_competency.pdf}}%
+    \put(0.39612095,0.02785822){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}{\begin{tabular}[t]{l}Softwareentwicklung\end{tabular}}}}%
+    \put(0.6937077,0.59570229){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}{\begin{tabular}[t]{l}Forschung\end{tabular}}}}%
+    \put(0.36638959,0.73432848){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}{\begin{tabular}[t]{l}Kreativi{\"a}t\end{tabular}}}}%
+    \put(0.2260714,0.65643411){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}{\begin{tabular}[t]{c}Projekt-\\management\end{tabular}}}}%
+    \put(0.18963227,0.16511248){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}{\begin{tabular}[t]{c}analytisches \\Denken\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{pie_chart_core_competency.pdf}}%
+  \end{picture}%
+\endgroup%
