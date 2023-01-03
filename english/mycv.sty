@@ -9,10 +9,10 @@
 \usepackage{ragged2e}
 \usepackage{setspace}% changes linespaceing within a DOUBLESPACING environment
 \usepackage[official]{eurosym} % symbold for EUR
-\usepackage[]{babel}
+%\usepackage[german]{babel}
 \usepackage{datetime}
 \usepackage{svg} % to include svg images
-\svgpath{../icons/}
+\svgpath{{../icons/}}
 \usepackage{colortbl} % needed to apply colored divider lines in TABULAR
 \usepackage{import} 
 
@@ -63,13 +63,28 @@
 	\put(-5,0){
 		\parbox[b][\paperheight]{\paperwidth}{%
 			\vfill
-	    \includegraphics[width=1.0\paperwidth,height=1.0\paperheight]{../img/Background_orange.pdf}
+	    \includegraphics[width=1.1\paperwidth,height=1.0\paperheight]{../img/Background_orange.pdf}
 	    %\includegraphics[width=1.0\paperwidth,height=1.0\paperheight]{../img/Background_pink.pdf}
 	    \vfill
 		}
   }
 }
 % ICONS -----------------------------------------------------------------------
+\newcommand{\maritalStatusIcon}{
+  \begin{picture}(15,15)
+  	\put(-1,-2.5){\tikz{\filldraw[draw=templateColor5,fill=templateColor5](0,0)
+		circle (2.2mm);}}
+    \put(1.4,0.0){\includesvg[width=2.6mm]{wedding-icon}}
+  \end{picture}%
+}
+\newcommand{\dateOfBirthIcon}{
+  \begin{picture}(15,15)
+  	\put(-1,-2.5){\tikz{\filldraw[draw=templateColor5,fill=templateColor5](0,0)
+		circle (2.2mm);}}
+    \put(1.4,0.3){\includesvg[width=3mm]{date-of-birth-icon}}
+  \end{picture}%
+}
+
 \newcommand{\telephoneIcon}{
   \begin{picture}(15,15)
   	\put(-1,-2.5){\tikz{\filldraw[draw=templateColor5,fill=templateColor5](0,0)
@@ -114,7 +129,7 @@
   \begin{picture}(35,32)
   	\put(3,2.5){\tikz{\filldraw[draw=templateColor5,fill=templateColor5](0,0)
 		circle (5mm);}}
-  	\put(6,6){\includesvg[width=8mm]{matlab_icon}}
+    \put(6,6){\includesvg[width=8mm]{matlab_icon}}
   \end{picture}%
 }
 % DEFINING SOME VARIABLES -----------------------------------------------------
