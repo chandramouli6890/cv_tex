@@ -1,11 +1,10 @@
-# LaTeX Makefile v0.33 -- LaTeX only
-
-# set the path to your TeX file here
-PAPER=Gnanasambandham_CV
+PAPER=main
 SHELL=/bin/bash
 
 # Targets
 .PHONY: all cv_german cv_english clean watch
+
+.IGNORE: cv_german cv_english
 
 # Default target: compile
 all: cv_german 
@@ -13,12 +12,14 @@ all: cv_german
 cv_german:  ## Compile paper
 	echo "\newboolean{GERMAN_CV}\setboolean{GERMAN_CV}{true}" > language_config.tex
 	pdflatex -synctex=1 -shell-escape -src-specials --interaction=nonstopmode $(PAPER) & bibtex $(PAPER)& pdflatex -synctex=1 -shell-escape -src-specials --interaction=nonstopmode $(PAPER)
-	#rubber --pdf $(PAPER).tex
+	rm language_config.tex
+	cp $(PAPER).pdf Gnanasambandham_CV_Deutsch.pdf
 
 cv_english:  ## Compile paper
 	echo "\newboolean{GERMAN_CV}\setboolean{GERMAN_CV}{false}" > language_config.tex
 	pdflatex -synctex=1 -shell-escape -src-specials --interaction=nonstopmode $(PAPER) & bibtex $(PAPER)& pdflatex -synctex=1 -shell-escape -src-specials --interaction=nonstopmode $(PAPER)
-	#rubber --pdf $(PAPER).tex
+	rm language_config.tex
+	cp $(PAPER).pdf Gnanasambandham_CV_english.pdf
 
 clean: 
 	rm -rf $(PAPER).aux
