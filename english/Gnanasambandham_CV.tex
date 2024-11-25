@@ -1,5 +1,8 @@
 \documentclass{mycv}
 
+\newboolean{GERMAN_CV}
+\setboolean{GERMAN_CV}{true}
+
 \newcommand{\CVRole}{senior software engineer}
 \newcommand{\CVFields}{autonomous driving, machine learning and artificial intelligence}
 
@@ -19,29 +22,35 @@
   \includegraphics[width=5.7cm]{../img/CV_Photo_Informal_Comp.png}
 \end{minipage}
 \begin{minipage}[]{0.8\textwidth}
+    \vspace{5mm}
 
-  \vspace{5mm}
-      {\huge Dr.-Ing }\\
+    {\huge Dr.-Ing }\\
 
-      {\Huge Chandramouli}\\
+    {\Huge Chandramouli}\\
 
     {\Huge Gnanasambandham}
     \vspace{2mm}
 
-    %{\large SIMULATION ENGINEER}
     \vspace{2mm}
 
-  %{\large
-    Steinweg 24\\
-    71263 Weil der Stadt\\
+    {\large
+        Steinweg 24\\
+        71263 Weil der Stadt\\
 
-    \dateOfBirthIcon 6\textsuperscript{th} August 1990\\
-  \maritalStatusIcon Married, no children\\
-  \telephoneIcon +49 179 6588043\\
-  \mailIcon \href{mailto:chandramouli@torc.ai}{\link{chandramouli@torc.ai}}
-  %}
+        \ifthenelse{\boolean{GERMAN_CV}}
+        {
+            \dateOfBirthIcon 6. August 1990\\
+            \maritalStatusIcon Verheiratet\\
+        }
+        {
+            \dateOfBirthIcon 6\textsuperscript{th} August 1990\\
+            \maritalStatusIcon Married, no children\\
+        }
+        \telephoneIcon +49 179 6588043\\
+        \mailIcon \href{mailto:chandramouli681990@gmail.com}{\link{chandramouli681990@gmail.com}}
+    }
   
-  \vspace{13mm}
+    \vspace{13mm}
 \end{minipage}
 
 {\rlap{\color{templateColor4}\rule[0mm]{\textwidth}{\ulinewidth}}}
@@ -50,50 +59,65 @@
 \setlength{\columnseprule}{\ulinewidth}
 \colseprulecolor{templateColor4}
 \begin{paracol}{2}
-        %\lsection{ANGESTREBTE STELLE}
-        % Deutsch #################################################################
+    \ifthenelse{\boolean{GERMAN_CV}}
+    {
+        \lsection{Angestrebte Position}
 
-        %Ich bin ein leidenschaftlich \,neugieriger
-        %Ingenieur mit exzellenten interkulturellen Kommunikationsfähigkeiten. Ich
-        %habe 6 Zeitschriftartikel in renommierten Fachzeitschriften publiziert
-        %und an mehreren erfolgreichen DFG-Forschungsantr{\"a}gen entscheidend
-        %mitgewirkt. All dies war möglich, dank meiner sehr guten
-        %Anpassungsf{\"a}higkeit an schnell wechselnden Umgebungen und meiner
-        %hervorragenden analytischen, Projektmanagement- und Team-F{\"a}higkeiten,
-        %die ich an der Universität erworben habe. Ich suche eine T{\"a}tigkeit als
-        %\CVRole, idealerweise im Bereich \CVFields.\\
-
-        % English #################################################################
+        Ich bin ein leidenschaftlich neugieriger Ingenieur mit hervorragenden
+        interkulturellen Kommunikationsf{\"a}higkeiten. In meiner aktuellen
+        Position leite ich die Entwicklung robuster Fahrzeugmodelle für
+        hochskalierbare Simulationen, die von über 200 aktiven Nutzern genutzt
+        werden. Darüber hinaus war ich w{\"a}hrend meiner Zeit an der
+        Universit{\"a}t Erstautor von 6 Artikeln in renommierten
+        Fachzeitschriften im Bereich Partikeldynamik. All dies wurde durch
+        meine au{\ss}ergewöhnliche Anpassungsf{\"a}higkeit sowie meine herausragenden
+        analytischen und Teamf{\"a}higkeiten erm{\"o}glicht. Jetzt strebe ich eine neue
+        Herausforderung als Senior Engineer an, um meine Expertise in
+        Simulation in innovative Mobilit{\"a}tsl{\"o}sungen einzubringen.
+    } 
+    { 
 
         \lsection{Profile}
 
-    I am a passionately curious engineer with excellent
-    intercultural communication skills. I have been spearheading the
-    development of robust multi-fidelity vehicle models for highly-scalable
-    simulations with over 300 active users in my current organization.
-    Moreover, I have been first author of 6 peer-reviewed journal articles in
-    the field of particle dynamics during my time at the academia. All this was
-    possible, thanks to my exceptional adaptability to rapidly changing
-    environments and my extraordinary analytical and team
-    skills. I am now seeking new opportunities as a Senior Engineer,
-    where I can leverage my expertise in simulation and analytical
-    problem-solving to contribute to cutting-edge innovations in mobility.\\
+        I am a passionately curious engineer with excellent
+        intercultural communication skills. I have been spearheading the
+        development of robust multi-fidelity vehicle models for highly-scalable
+        simulations with over 300 active users in my current organization.
+        Moreover, I have been first author of 6 peer-reviewed journal articles in
+        the field of particle dynamics during my time at the academia. All this was
+        possible, thanks to my exceptional adaptability to rapidly changing
+        environments and my extraordinary analytical and team
+        skills. I am now seeking new opportunities as a Senior Engineer,
+        where I can leverage my expertise in simulation and analytical
+        problem-solving to contribute to cutting-edge innovations in mobility.\\
+    }
+
+  \ifthenelse{\boolean{GERMAN_CV}}
+  {
+      \lsection{Sprachen}
+      \begin{onehalfspace}
+      \begin{tabular}{
+                p{2cm} >{\raggedleft\arraybackslash}p{4.5cm}}
+                {\mybox\mybox\mybox\mybox\mybox}  & {flie{\ss}end| Deutsch} \\
+                {\mybox\mybox\mybox\mybox\mybox} & {flie{\ss}end | Englisch}\\
+                {\mybox\mybox\mybox\mybox\mybox}  & {Muttersprache | Tamil}  \\
+                {\mybox\mybox\mybox\mybox\myboxo}  & {fortgeschritten | Hindi}\\\\
+      \end{tabular}
+      \end{onehalfspace}
+  }
+  {
 
       \lsection{Languages}
-      \begin{doublespace}
-            \begin{tabular}{%
-                p{2cm}%
-                >{\raggedleft\arraybackslash}p{4.5cm}}
-            {\mybox\mybox\mybox\mybox\mybox}  &
-            {Proficient | German} \\
-      {\mybox\mybox\mybox\mybox\mybox} & 
-            {Proficient | English}\\
-      {\mybox\mybox\mybox\mybox\mybox}  & 
-      {Mother tounge | Tamil}  \\
-      {\mybox\mybox\mybox\mybox\myboxo}  & 
-      {Advanced | Hindi}\\\\
-        \end{tabular}
-      \end{doublespace}
+      \begin{onehalfspace}
+          \begin{tabular}{
+                  p{2cm} >{\raggedleft\arraybackslash}p{4.5cm}}
+                  {\mybox\mybox\mybox\mybox\mybox}  & {Proficient | German} \\
+                  {\mybox\mybox\mybox\mybox\mybox} & {Proficient | English}\\
+                  {\mybox\mybox\mybox\mybox\mybox}  & {Mother tounge | Tamil}  \\
+                  {\mybox\mybox\mybox\mybox\myboxo}  & {Advanced | Hindi}\\\\
+          \end{tabular}
+      \end{onehalfspace}
+  }
 
         \lsection{Web}
         \begin{minipage}[c]{0.31\textwidth}
@@ -131,137 +155,289 @@
         \end{minipage}
 
 \switchcolumn
-\rsection{Educational Qualifications}
-\subsection{May 2016 - April 2021}{Ph.D. in Mechanical Engineering}
-        {University of Stuttgart}\\
+\ifthenelse{\boolean{GERMAN_CV}}
+{
+    \rsection{Ausbildung}
+        \subsection{May 2016 - April 2021}{Promotion zum
+        Dr.-Ing.}{Universit{\"a}t Stuttgart}, {Abschlussnote: 1.0 ({\bfseries Magna cum
+        laude})}
+          \begin{itemize}
+              \item Dissertationstitel: Particle Dampers- Enhancing
+                  Energy Dissipation using Fluid/Solid Interactions and Rigid
+                  Obstacle-Grids
+          \end{itemize}
+        
+        \subsection{Oktober 2012 - April 2016}{Master of Science in Commercial
+        Vehicle Technology}{Technische Universit{\"a}t Kaiserslautern,
+        {Abschlussnote: 1.9}}\\
+        
+        \subsection{Juni 2008 - April 2012}{Bachelor of Engineering in
+        Fertigunstechnik} {Anna University, Chennai, Indien, {Abschlussnote:
+        8.3/10} ({\bfseries sehr gut})}\\
+
+}
+{
+    \rsection{Educational Qualification}
+        \subsection{May 2016 - April 2021}{Ph.D. in Mechanical Engineering}
+        {University of Stuttgart}
+          \begin{itemize}
+              \item Dissertation Titel: Particle Dampers- Enhancing
+                  Energy Dissipation using Fluid/Solid Interactions and Rigid
+                  Obstacle-Grids
+          \end{itemize}
 
         \subsection{October 2012 - April 2016}{Master of Science in Commercial Vehicle
         Technology}{Technical University of Kaiserslautern, {Grade: 1.9}}\\
 
         \subsection{June 2008 - April 2012}{Bachelor of Engineering in
             Production Engineering}{Anna University, Chennai, India, {Grade CGPA: 8.3/10}}\\
+}
 
-\rsection{Professional Career}
-  \subsection{April 2023 - present}{Torc Europe GmbH, Stuttgart}{Staff software engineer}
-        \begin{itemize}
-          \item Spearheaded a team of four PhDs to design and develop a highly-scalable
-              vehicle model in native C++ following Test-Driven Development
-              (TDD) and Object-Oriented Programming (OOP)
-          \item Integrated vehicle models into a Robotic Operating System (ROS)
-              based simulator to enable virtual validation of Level 4
-              autonomous vehicles
-          \item Partnered with multiple external stakeholders to develop a
-              scalable validation strategy for multi-fidelity vehicle models
-              following the ISO-26262 standards
-        \end{itemize}
+\ifthenelse{\boolean{GERMAN_CV}}
+{
+    \rsection{Beruflicher Werdegang}
+    \subsection{April 2023 - heute}{Torc Europe GmbH, Stuttgart}{Staff software engineer}
+          \begin{itemize}
 
-  \subsection{August 2021 - March 2023}{Daimler Truck AG, Stuttgart}{Vehicle model engineer}
-        \begin{itemize}
-            \item Develop multi-fidelity vehicle models for scalable simulations in the context of
-        virtual validation in MATLAB/Simulink
-          \item Qualify vehicle models following the ISO-26262 standards 
-          \item Developed a co-simulation framework to interface a
-              high-fidelity multibody system truck model running on a Windows
-              client with a virtual driver on an Ubuntu host using TCP/IP
-              communication.
-        \end{itemize}
+            \item Leitung eines Teams zur Entwicklung eines skalierbaren
+                Fahrzeugmodells in C++ mit Test-Driven Development (TDD) und
+                objektorientierter Programmierung (OOP).
+
+            \item Integration von Fahrzeugmodellen in einen ROS-basierten
+                Simulator zur virtuellen Validierung von Level-4 autonome LKWs. 
+
+            \item Zusammenarbeit mit externen Partnern, um eine skalierbare
+                Qualifizierungsstrategie für Fahrzeugmodelle gem{\"a}{\ss} den
+                ISO-26262 zu entwickeln.
+          \end{itemize}
+     
+          \subsection{August 2021 - M{\"a}rz 2023}{Daimler Truck AG, Stuttgart}{Entwicklungsingineur, Autonomous Technology Group}
+           \begin{itemize}
+               \item Entwicklung Fahrzeugmodelle mit unterschiedlichem
+                   Detailierungsgrad f{\"u}r skalierbare Simulationen in MATLAB/Simulink.
+
+               \item Entwicklung einer C++ Co-Simulations-Schnittstelle zur
+                   Kopplung eines hochdetaillierten Mehrk{\"o}rpermodells mit
+                   einem virtuellen Fahrer für hochdynamischen
+                   Man{\"o}versimulationen.
+
+           \end{itemize}
+}
+{
+    \rsection{Professional Career}
+    \subsection{April 2023 - present}{Torc Europe GmbH, Stuttgart}{Staff software engineer}
+          \begin{itemize}
+            \item Spearheaded a team develop a highly-scalable
+                vehicle model in C++ following Test-Driven Development
+                (TDD) and Object-Oriented Programming (OOP)
+            \item Integrated vehicle models into a Robotic Operating System (ROS)
+                based simulator to enable virtual validation of Level 4
+                autonomous vehicles
+            \item 
+                Collaborated with external stakeholders to develop a scalable
+                validation strategy for vehicle models as per
+                ISO-26262.
+
+
+          \end{itemize}
+    
+    \subsection{August 2021 - March 2023}{Daimler Truck AG, Stuttgart}{Vehicle model engineer}
+          \begin{itemize}
+              \item Develop multi-fidelity vehicle models for scalable simulations in the context of
+          virtual validation in MATLAB/Simulink
+
+            \item Developed a co-simulation interface in C++ to couple a high-fidelity
+                multibody truck model and the virtual driver using
+                TCP/IP communication interface.
+
+          \end{itemize}
+}
 \end{paracol}
 
 {\rlap{\color{templateColor4}\rule[0mm]{\textwidth}{\ulinewidth}}}
 \begin{paracol}{2}
     \switchcolumn
-    \subsection{May 2016 - April 2021}{University of Stuttgart}{Scientific staff at the institute for engineering and
-      computational \quad\quad mechanics (ITM)}
-          \begin{itemize}
-              \item {\bfseries PhD Topic}: Particle Dampers- Enhancing Energy Dissipation using Fluid/Solid Interactions and Rigid Obstacle-Grids
-          \end{itemize}
-    \subsection{October 2015 - April 2016}{Fraunhofer Institute (ITWM), Kaiserslautern}
-        {Intern in the department of mathematics for vehicle engineering}\\
+    \ifthenelse{\boolean{GERMAN_CV}}
+    {
+        \rsection{Beruflicher Werdegang (Fortsetzung)}
+        \subsection{Mai 2016 - April 2021}{Universit{\"a}t
+        Stuttgart}{Wissenschaftlicher Mitarbeiter am Institut f{\"u}r
+        technische und numerische Mechanik (ITM)}\\
 
-        \rsection{Technical Skills}
-        %\begin{singlespace}
+        \subsection{October 2015 - April 2016}{Fraunhofer Institute (ITWM), Kaiserslautern}
+            {Werkstudent in der Abteilung Mathematik für die Fahrzeugentwicklung}\\
+    }
+    {
+        \rsection{Professional Career (continued)}
+        \subsection{May 2016 - April 2021}{University of Stuttgart}{Scientific staff at the institute for engineering and
+            computational \quad\quad mechanics (ITM)}
+        \subsection{October 2015 - April 2016}{Fraunhofer Institute (ITWM), Kaiserslautern}
+            {Intern in the department of mathematics for vehicle engineering}\\
+    }
+    
+    \ifthenelse{\boolean{GERMAN_CV}}
+    {
+        \rsection{Technische Qualifikationen}
         \begin{doublespace}
-        %\begin{onehalfspace}
+            \begin{tabular}{p{5cm}!{\color{templateColor1}\vrule}p{6.5cm}}
+            {\bfseries Programmiersprachen: } & {\bfseries Betriebssystem:}\\
+            {\mybox\mybox\mybox\mybox\mybox 9 Jahre | C/C++}  &
+            {\mybox\mybox\mybox\mybox\mybox Linux (Debian, Ubuntu)}\\
+            {\mybox\mybox\mybox\mybox\mybox 9 Jahre | MATLAB} & 
+            {\mybox\mybox\mybox\mybox\myboxo Microsoft Windows}\\
+            {\mybox\mybox\mybox\mybox\myboxo 9 Jahre | BASH}  & \\
+            {\mybox\mybox\mybox\myboxo\myboxo 6 Jahre | Python}  & \\
+        \end{tabular}\vspace{4mm}
+        \end{doublespace}
+    }
+    {
+        \rsection{Technical Skills}
+        \begin{doublespace}
             \begin{tabular}{p{5cm}!{\color{templateColor1}\vrule}p{6.5cm}}
             {\bfseries Programming Languages: } & {\bfseries Operating System:}\\
             {\mybox\mybox\mybox\mybox\mybox 12 years | C/C++}  &
             {\mybox\mybox\mybox\mybox\mybox Linux (Debian, Ubuntu)}\\
-      {\mybox\mybox\mybox\mybox\mybox 12 years | MATLAB} & 
+            {\mybox\mybox\mybox\mybox\mybox 12 years | MATLAB} & 
             {\mybox\mybox\mybox\mybox\myboxo Microsoft Windows}\\
-      % {\mybox\mybox\mybox\mybox\myboxo 9 years | BASH}  & \\
-      {\mybox\mybox\mybox\myboxo\myboxo 6 years | Python}  & \\
+            {\mybox\mybox\mybox\mybox\myboxo 9 years | BASH}  & \\
+            {\mybox\mybox\mybox\myboxo\myboxo 6 years | Python}  & \\
         \end{tabular}\vspace{4mm}
         \end{doublespace}
-        %\end{singlespace}
+    }
 
-     {\bfseries Simulation and Data Skills:}
-     \begin{itemize}
-         \item {\bfseries MATLAB/Simulink:} Modelling, \,simulation,
-             numerical optimization, SiL/DiL simulations, MATLAB GUI, FMI
-         \item {\bfseries C/C++:} MEX API, SilverBypass, FMI, ROS, TCP/IP and UDP
-         \item{\bfseries Multibody-Simulation:}  LMS Virtual.Lab Motion, Neweul-M$^2$, 
-             MSC Adams, Project Chrono
-         \item{\bfseries ADAS/AD-Simulation Tools:}  Applied Object-Sim, IPG CarMaker, IPG TruckMaker
-         \item{\bfseries Multibody-Simulation:}  LMS Virtual.Lab Motion, Neweul-M$^2$, 
-         \item {\bfseries Python:} AWS Athena, Ploty Dash, Flask, NumPy, SciPy, Pandas
-         %\item {\bfseries Partikelsimulation:} Pasimodo, Project Chrono, DualSPHysics
-         %\item {\bfseries Data Visualization:} Paraview, PlotlyDash, Matplotlib, MATLAB 
-         \item {\bfseries Other Software Tools:}  Silver Virtual-ECU, COMSOL
-             Multiphysics, OptiSlang, Oracle VM VirtualBox
-         %\item {\bfseries Sonstiges:} \LaTeX{}, TikZ, Inkscape, MS Office
-     \end{itemize}\par
+    \ifthenelse{\boolean{GERMAN_CV}}
+    {
+        {\bfseries Prgramm-Kenntnisse:}
+        \begin{itemize}
+            \item {\bfseries MATLAB/Simulink:} Modellierung, Simulation,
+                Optimierung, SiL/DiL simulations, MATLAB GUI, FMI
+            \item {\bfseries C/C++:} MEX API, SilverBypass, FMI, ROS, TCP/IP and UDP
+            \item{\bfseries Mehrk{\"o}rpersimulation:}  LMS Virtual.Lab Motion, Neweul-M$^2$, 
+                MSC Adams, Project Chrono
+            \item{\bfseries ADAS/AD-Simulationen:} Applied Object-Sim, IPG CarMaker, IPG TruckMaker
+            \item {\bfseries sonstige Programme:}  Silver Virtual-ECU, COMSOL
+                Multiphysics, OptiSlang, Oracle VM VirtualBox
+        \end{itemize} \par
 
-     {\bfseries Software Development Tools:}\par
-     \begin{itemize}
-         \item {\bfseries CI Tools:} Git, Github CLI, Jenkins, Docker\par
-         % \item {\bfseries Development Environments:} \verb|vim|, Visual-Studio Code,
-         %     Eclipse \par
-         \item {\bfseries Technologies:} PETSc, EIGEN, OpenGL\par
-         \item {\bfseries Debuggers/Profilers:} \verb|gdb|, \verb|valgrind|, \verb|calgrind|,
-             Intel VTune\\
-     \end{itemize}
-        
+        {\bfseries Software Entwicklung:}\par
+        \begin{itemize}
+            \item {\bfseries CI Tools:} Git, Github CLI, Jenkins, Docker\par
+            \item {\bfseries Technologien:} PETSc, EIGEN, OpenGL\par
+            \item {\bfseries Debuggers/Profilers:} {\verb|gdb}, {\verb|valgrind}, {\verb|calgrind},
+                Intel VTune\\
+        \end{itemize}
+    }
+    {
+        {\bfseries Simulation and Data Skills:}
+        \begin{itemize}
+            \item {\bfseries MATLAB/Simulink:} Modelling, \,simulation,
+                numerical optimization, SiL/DiL simulations, MATLAB GUI, FMI
+            \item {\bfseries C/C++:} MEX API, SilverBypass, FMI, ROS, TCP/IP and UDP
+            \item{\bfseries Multibody-Simulation:}  LMS Virtual.Lab Motion, Neweul-M$^2$, 
+                MSC Adams, Project Chrono
+            \item{\bfseries ADAS/AD-Simulation Tools:}  Applied Object-Sim, IPG CarMaker, IPG TruckMaker
+            \item{\bfseries Multibody-Simulation:}  LMS Virtual.Lab Motion, Neweul-M$^2$
+            %\item {\bfseries Partikelsimulation:} Pasimodo, Project Chrono, DualSPHysics
+            %\item {\bfseries Data Visualization:} Paraview, PlotlyDash, Matplotlib, MATLAB 
+            \item {\bfseries Other Software Tools:}  Silver Virtual-ECU, COMSOL
+                Multiphysics, OptiSlang, Oracle VM VirtualBox
+            %\item {\bfseries Sonstiges:} \LaTeX{}, TikZ, Inkscape, MS Office
+        \end{itemize} \par
 
-\switchcolumn
-      \lsection{Awards}
-      {\RaggedLeft \bfseries Best Presentation Award 2014\\}
-      Optimization of Vehicle Parameters based on Lap-Time
-      Simulations using Multiobjective Evolutionary Algorithm\\
-
-      {\RaggedLeft \bfseries Best Presentation Award 2015\\}
-      An Adaptive Approach to Real-Time Estimation of
-      Vehicle Dynamics Parameters using Kalman Filtering\\\\
-      {\footnotesize Both awards were offered by ALTEN GmbH, complemented
-            with a cash-prize of {\bfseries500\,\euro{}} respectively.}\\
-
-    \lsection{Other Fun Projects}
-    {\RaggedLeft July 2020 - present\\ \bfseries Raspberry Pi Powered Smart-Home\\}
-  As part of a on-going hobby project, I have built a versatile Raspberry-Pi smart home network with remote-ssh-access,
-  custom file storage server with automatic backups using \verb|rsync|, Zigbee2Mqtt server for controlling IOT devices
-  using siri/google-nest and custom automations.\\
-
-    {\RaggedLeft Juni 2015\\ \bfseries Machine Learning Suite\\}
-  Implementation of a deep convolution neural network for optical character recognition as part of a
-  freelance software project in MATLAB. To increase performance the {MEX API} was used.\\
-
-    {\RaggedLeft Juni 2014\\ \bfseries Driver-in-the-Loop Simulator\\}
-  As part of my work for the KaRaT formula student racing team, I developed a driver-in-the-loop simulator based on
-  a communication interface between {IPG CarMaker} and {MATLAB/Simulink}.\\
+        {\bfseries Software Development Tools:}\par
+        \begin{itemize}
+            \item {\bfseries CI Tools:} Git, Github CLI, Jenkins, Docker\par
+            \item {\bfseries Technologies:} PETSc, EIGEN, OpenGL\par
+            \item {\bfseries Debuggers/Profilers:} {\verb|gdb}, {\verb|valgrind}, {\verb|calgrind},
+                Intel VTune\\
+        \end{itemize}
+    }
 
 \switchcolumn
-\rsection{Selected Publications}
-{\footnotesize
-{\bfseries Gnanasambandham}, C.; Fleissner, F.; Eberhard, P.: Enhancing the
-Dissipative Properties of PDs using Rigid Obstacle-Grids. 
-Journal of Sound and Vibration, Vol. 484, p. 115522, 2020.\\
-{\bfseries Gnanasambandham}, C.; Stender, M.; Hoffmann, N.; Eberhard, P.:
-Multi-Scale Dynamics of PDs using Wavelets: Extracting Particle
-Activity Metrics from Ring Down Experiments. Journal of Sound Vibration,
-Vol. 454, pp. 1-13, 2019.\\
-% {\bfseries Gnanasambandham}, C.; Sch{\"onle}, A.; Eberhard, P.: Investigating
-% the Dissipative Effects of Liquid Filled PDs using Coupled DEM-SPH
-% Methods. Computational Particle Mechanic, Vol. 6, pp. 257-169, 2019.\\
-% }
+\ifthenelse{\boolean{GERMAN_CV}}
+{
+    \lsection{Preise}
+    {\RaggedLeft \bfseries Best Presentation Award 2014\\}
+    Title: Optimization of Vehicle Parameters based on Lap-Time
+    Simulations using Multiobjective Evolutionary Algorithm\\
+
+    {\RaggedLeft \bfseries Best Presentation Award 2015\\} Title: An Adaptive
+    Approach to Real-Time Estimation of Vehicle Dynamics Parameters using
+    Kalman Filtering\\\\ {\footnotesize Der Preis wurde von der Firmal ALTEN
+    GmbH gestiftet und war mit {\bfseries500\,\euro{}} dotiert.}\\
+
+    \lsection{Sonstige Projekte} 
+
+    {\RaggedLeft July 2020 - heute\\ \bfseries Raspberry Pi gesteuerte
+    Smart-Home\\} Im Rahmen eines laufenden Hobbyprojekts habe ich ein
+    vielseitiges Raspberry-Pi-Smart-Home-Netzwerk aufgebaut. Es umfasst
+    Remote-SSH-Zugriff, einen flexiblen Datenserver mit
+    automatischen Backups {\"u}ber {\verb|rsync}, einen Zigbee2Mqtt-Server zur
+    Steuerung von IoT-Geräten z.B. über Siri.\\
+
+    {\RaggedLeft Juni 2015\\ \bfseries Machine Learning Suite\\} 
+    Implementierung eines Deep-Convolution-Neural-Networks zur optischen
+    Zeichenerkennung im Rahmen eines freiberuflichen Softwareprojekts in
+    MATLAB. Zur Leistungssteigerung wurde die {MEX-API} genutzt. \\
+
+    {\RaggedLeft Juni 2014\\ \bfseries Driver-in-the-Loop Simulator\\} 
+    Im Rahmen meiner Arbeit für ein Formula-Student-Rennteam entwickelte ich
+    einen Driver-in-the-Loop-Simulator auf Basis einer
+    Kommunikationsschnittstelle zwischen IPG CarMaker und MATLAB/Simulink.\\
+}
+{ 
+    \lsection{Awards}
+    {\RaggedLeft \bfseries Best Presentation Award 2014\\}
+    Optimization of Vehicle Parameters based on Lap-Time
+    Simulations using Multiobjective Evolutionary Algorithm\\
+
+    {\RaggedLeft \bfseries Best Presentation Award 2015\\} An Adaptive Approach
+    to Real-Time Estimation of Vehicle Dynamics Parameters using Kalman
+    Filtering\\\\ 
+    {\footnotesize Both awards were offered by ALTEN GmbH,
+    complemented with a cash-prize of {\bfseries500\,\euro{}} respectively.}\\
+
+    \lsection{Other Fun Projects} 
+
+    {\RaggedLeft July 2020 - present\\ \bfseries
+    Raspberry Pi Powered Smart-Home\\} As part of a on-going hobby project, I
+    have built a versatile Raspberry-Pi smart home network with
+    remote-ssh-access, custom file storage server with automatic backups using
+    {\verb|rsync}, Zigbee2Mqtt server for controlling IOT devices using
+    siri/google-nest and custom automations.\\
+
+    {\RaggedLeft Juni 2015\\ \bfseries Machine Learning Suite\\} Implementation
+    of a deep convolution neural network for optical character recognition as
+    part of a freelance software project in MATLAB. To increase performance the
+    {MEX API} was used.\\
+
+    {\RaggedLeft Juni 2014\\ \bfseries Driver-in-the-Loop Simulator\\} As part
+    of my work for a formula student racing team, I developed a
+    driver-in-the-loop simulator based on a communication interface between
+    {IPG CarMaker} and {MATLAB/Simulink}.\\
+}
+
+\switchcolumn
+\ifthenelse{\boolean{GERMAN_CV}}
+{
+    \rsection{Ausgew{\"a}hlte Publikationen}
+}
+{
+    \rsection{Selected Publications}
+}
+    {\footnotesize
+    {\bfseries Gnanasambandham}, C.; Fleissner, F.; Eberhard, P.: Enhancing the
+    Dissipative Properties of PDs using Rigid Obstacle-Grids. 
+    Journal of Sound and Vibration, Vol. 484, p. 115522, 2020.\\
+    {\bfseries Gnanasambandham}, C.; Stender, M.; Hoffmann, N.; Eberhard, P.:
+    Multi-Scale Dynamics of PDs using Wavelets: Extracting Particle
+    Activity Metrics from Ring Down Experiments. Journal of Sound Vibration,
+    Vol. 454, pp. 1-13, 2019.\\
+    % {\bfseries Gnanasambandham}, C.; Sch{\"onle}, A.; Eberhard, P.: Investigating
+    % the Dissipative Effects of Liquid Filled PDs using Coupled DEM-SPH
+    % Methods. Computational Particle Mechanic, Vol. 6, pp. 257-169, 2019.\\
+    % }
+}
 \end{paracol}
 
 \begin{figure}[h]
@@ -269,7 +445,13 @@ Vol. 454, pp. 1-13, 2019.\\
         \put(370,0){\includegraphics[width=5.0cm]{../img/Gnanasambandham_Signature.png}}
     \end{picture}
 \end{figure}
-\vspace{-0.7cm}\hspace{5.5cm} Stuttgart, \today \quad \hrulefill\\
+\ifthenelse{\boolean{GERMAN_CV}}
+{
+    \vspace{-0.7cm}\hspace{5.5cm} Stuttgart, den 25. November 2024 \quad \hrulefill\\
+}
+{
+    \vspace{-0.7cm}\hspace{5.5cm} Stuttgart, \today \quad \hrulefill\\
+}
 \raggedleft Dr.-Ing Chandramouli Gnanasambandham
 
 \end{document} 
