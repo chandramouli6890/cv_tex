@@ -19,7 +19,7 @@ cv_english:  ## Compile paper
 	echo "\newboolean{GERMAN_CV}\setboolean{GERMAN_CV}{false}" > language_config.tex
 	pdflatex -synctex=1 -shell-escape -src-specials --interaction=nonstopmode $(PAPER) & bibtex $(PAPER)& pdflatex -synctex=1 -shell-escape -src-specials --interaction=nonstopmode $(PAPER)
 	rm language_config.tex
-	cp $(PAPER).pdf Gnanasambandham_CV_english.pdf
+	cp $(PAPER).pdf Gnanasambandham_CV_English.pdf
 
 clean: 
 	rm -rf $(PAPER).aux
