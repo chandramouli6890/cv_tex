@@ -18,24 +18,28 @@
 
 % SOME TIKZ STUFF -------------------------------------------------------------
 \usepackage{tikz}
-\usepackage{pgf-pie}
+% \usepackage{pgf-pie}
 % DEFINING TEMPLATE COLORS ----------------------------------------------------
 \usepackage{xcolor}
 % orange color palatte
-%\definecolor{templateColor1}{HTML}{000000} %black
+% \definecolor{templateColor1}{HTML}{3c3c3c}
+% \definecolor{templateColor2}{HTML}{3e8ba9}
+% \definecolor{templateColor3}{HTML}{556575}
+% \definecolor{templateColor4}{HTML}{fca26e}
+% \definecolor{templateColor5}{HTML}{f46c0d}
+% \definecolor{templateColor5}{HTML}{d68042}
+
+% blue color palatte
 \definecolor{templateColor1}{HTML}{3c3c3c}
-%\definecolor{templateColor2}{HTML}{265669}
-\definecolor{templateColor2}{HTML}{3e8ba9}
-\definecolor{templateColor3}{HTML}{556575}
-\definecolor{templateColor4}{HTML}{fca26e}
-\definecolor{templateColor5}{HTML}{f46c0d}
+\definecolor{templateColor4}{HTML}{77a4d4}
+\definecolor{templateColor5}{HTML}{3873b3}
 
 % pink color palatte
-%\definecolor{templateColor1}{HTML}{000000}
-%\definecolor{templateColor2}{HTML}{193946}
-%\definecolor{templateColor3}{HTML}{6b5d78}
-%\definecolor{templateColor4}{HTML}{f8b496}
-%\definecolor{templateColor5}{HTML}{f7727d}
+% \definecolor{templateColor1}{HTML}{000000}
+% \definecolor{templateColor2}{HTML}{193946}
+% \definecolor{templateColor3}{HTML}{6b5d78}
+% \definecolor{templateColor4}{HTML}{f8b496}
+% \definecolor{templateColor5}{HTML}{f7727d}
 
 % SOME PARACOL STUFF -------------------------------------------------------------
 \usepackage{paracol}
@@ -72,14 +76,14 @@
 % ICONS -----------------------------------------------------------------------
 \newcommand{\maritalStatusIcon}{
   \begin{picture}(15,15)
-  	\put(-1,-2.5){\tikz{\filldraw[draw=templateColor5,fill=templateColor5](0,0)
+  	\put(-1,-2.5){\tikz{\filldraw[draw=templateColor4,fill=templateColor4](0,0)
 		circle (2.2mm);}}
     \put(1.4,0.0){\includesvg[width=2.6mm]{wedding-icon}}
   \end{picture}%
 }
 \newcommand{\dateOfBirthIcon}{
   \begin{picture}(15,15)
-  	\put(-1,-2.5){\tikz{\filldraw[draw=templateColor5,fill=templateColor5](0,0)
+  	\put(-1,-2.5){\tikz{\filldraw[draw=templateColor4,fill=templateColor4](0,0)
 		circle (2.2mm);}}
     \put(1.4,0.3){\includesvg[width=3mm]{date-of-birth-icon}}
   \end{picture}%
@@ -87,7 +91,7 @@
 
 \newcommand{\telephoneIcon}{
   \begin{picture}(15,15)
-  	\put(-1,-2.5){\tikz{\filldraw[draw=templateColor5,fill=templateColor5](0,0)
+  	\put(-1,-2.5){\tikz{\filldraw[draw=templateColor4,fill=templateColor4](0,0)
 		circle (2.2mm);}}
   	\put(1,1){\includesvg[width=3.1mm]{black_telephone_icon}}
   \end{picture}%
@@ -95,7 +99,7 @@
 
 \newcommand{\mailIcon}{
   \begin{picture}(15,15)
-  	\put(-1,-3.5){\tikz{\filldraw[draw=templateColor5,fill=templateColor5](0,0)
+  	\put(-1,-3.5){\tikz{\filldraw[draw=templateColor4,fill=templateColor4](0,0)
 		circle (2.2mm);}}
   	\put(1.5,0){\includesvg[width=2.8mm]{gmail_icon}}
   \end{picture}%
@@ -103,7 +107,7 @@
 
 \newcommand{\linkedinIcon}{
   \begin{picture}(35,32)
-  	\put(3,2.5){\tikz{\filldraw[draw=templateColor5,fill=templateColor5](0,0)
+  	\put(3,2.5){\tikz{\filldraw[draw=templateColor4,fill=templateColor4](0,0)
 		circle (5mm);}}
   	\put(9,8.5){\includesvg[width=6mm]{linkedin_icon}}
   \end{picture}%
@@ -111,7 +115,7 @@
 
 \newcommand{\mediumIcon}{
   \begin{picture}(35,32)
-  	\put(3,2.5){\tikz{\filldraw[draw=templateColor5,fill=templateColor5](0,0)
+  	\put(3,2.5){\tikz{\filldraw[draw=templateColor4,fill=templateColor4](0,0)
 		circle (5mm);}}
   	\put(9,10.5){\includesvg[width=6mm]{medium_icon}}
   \end{picture}%
@@ -119,7 +123,7 @@
 
 \newcommand{\githubIcon}{
   \begin{picture}(35,32)
-  	\put(3,2.5){\tikz{\filldraw[draw=templateColor5,fill=templateColor5](0,0)
+  	\put(3,2.5){\tikz{\filldraw[draw=templateColor4,fill=templateColor4](0,0)
 		circle (5mm);}}
   	\put(6,6){\includesvg[width=8mm]{github_icon}}
   \end{picture}%
@@ -127,25 +131,25 @@
 
 \newcommand{\matlabIcon}{
   \begin{picture}(35,32)
-  	\put(3,2.5){\tikz{\filldraw[draw=templateColor5,fill=templateColor5](0,0)
+  	\put(3,2.5){\tikz{\filldraw[draw=templateColor4,fill=templateColor4](0,0)
 		circle (5mm);}}
     \put(6,6){\includesvg[width=8mm]{matlab_icon}}
   \end{picture}%
 }
 % DEFINING SOME VARIABLES -----------------------------------------------------
-\newcommand{\ulinespace}{10pt}
-\newcommand{\ulinewidth}{1.2pt}
+\newcommand{\ulinespace}{7pt}
+\newcommand{\ulinewidth}{1.4pt}
 
 % CUSTOM SECTION --------------------------------------------------------
 % purely using \newcommands
 \newcommand{\lcoluline}{
-	{\color{templateColor1}\rule[\ulinespace]{0.135\textwidth}{\ulinewidth}}\noindent
-  {\color{templateColor5}\rule[\ulinespace]{0.241\textwidth}{\ulinewidth}}
+	{\color{templateColor4}\rule[\ulinespace]{0.135\textwidth}{\ulinewidth}}\noindent
+  {\color{templateColor4}\rule[\ulinespace]{0.241\textwidth}{\ulinewidth}}
 }
 
 \newcommand{\rcoluline}{
-	{\color{templateColor5}\rule[\ulinespace]{0.40\textwidth}{\ulinewidth}}\noindent
-  {\color{templateColor1}\rule[\ulinespace]{0.184\textwidth}{\ulinewidth}}
+	{\color{templateColor4}\rule[\ulinespace]{0.40\textwidth}{\ulinewidth}}\noindent
+  {\color{templateColor4}\rule[\ulinespace]{0.184\textwidth}{\ulinewidth}}
 }
 
 %\newcommand{\lsection}[1]
@@ -179,10 +183,10 @@
 %\titlespacing*{\subsection}{0mm}{2mm}{2mm}
 
 \renewcommand{\subsection}[3]{#1\\
-	\rlap{\begin{picture}(10,10)\put(-11,-3){\mytriangle{templateColor1}}\end{picture}}{\bfseries#2}\\#3}
+	\rlap{\begin{picture}(10,10)\put(-11,-3){\mytriangle{templateColor4}}\end{picture}}{\bfseries#2}\\#3}
 
 % -----------------------------------------------------------------------------
-\newrobustcmd*{\mybox}[]{\tikz{\filldraw[draw=templateColor1,fill=templateColor5]
+\newrobustcmd*{\mybox}[]{\tikz{\filldraw[draw=templateColor1,fill=templateColor4]
 (0,0) rectangle(1.8mm,1.8mm)} \,}
 \newrobustcmd*{\myboxo}[]{\tikz{\filldraw[draw=templateColor1,fill=white] (0,0)
 rectangle(1.8mm,1.8mm)} \,}
