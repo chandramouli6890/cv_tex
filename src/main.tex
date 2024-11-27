@@ -23,7 +23,7 @@
 \begin{minipage}[]{0.8\textwidth}
     \vspace{5mm}
 
-    {\huge Dr.-Ing }\\
+    {\huge Dr.-Ing. }\\
 
     {\Huge Chandramouli}\\
 
@@ -39,11 +39,9 @@
         \ifthenelse{\boolean{GERMAN_CV}}
         {
             \dateOfBirthIcon 6. August 1990\\
-            \maritalStatusIcon Verheiratet\\
         }
         {
             \dateOfBirthIcon 6\textsuperscript{th} August 1990\\
-            \maritalStatusIcon Married, no children\\
         }
         \telephoneIcon +49 179 6588043\\
         \mailIcon \href{mailto:chandramouli681990@gmail.com}{\link{chandramouli681990@gmail.com}}
@@ -63,16 +61,17 @@
         \lsection{Angestrebte Position}
 
         Ich bin ein leidenschaftlich neugieriger Ingenieur mit hervorragenden
-        interkulturellen Kommunikationsf{\"a}higkeiten. In meiner aktuellen
-        Position leite ich die Entwicklung robuster Fahrzeugmodelle für
-        hochskalierbare Simulationen, die von über 200 aktiven Nutzern genutzt
-        werden. Darüber hinaus war ich w{\"a}hrend meiner Zeit an der
-        Universit{\"a}t Erstautor von 6 Artikeln in renommierten
-        Fachzeitschriften im Bereich Partikeldynamik. All dies wurde durch
-        meine au{\ss}ergewöhnliche Anpassungsf{\"a}higkeit sowie meine herausragenden
-        analytischen und Teamf{\"a}higkeiten erm{\"o}glicht. Jetzt strebe ich eine neue
+        interkulturellen Kommunikationsf{\"a}higkeiten. Aktuell leite ich die
+        Entwicklung robuster Fahrzeugmodelle für hochskalierbare Simulationen,
+        die von über 200 aktiven Nutzern genutzt werden. Die Abstimmung mit
+        interdisziplin{\"a}ren, internationalen Nutzern findet {\"u}ber
+        verschiedene Zeitzone hinweg. Während meiner Zeit an der Universität
+        war ich Erstautor von 6 Artikeln in renommierten Fachzeitschriften im
+        Bereich Partikeldynamik, verfasst mit führenden Wissenschaftsexperten.
+        All dies wurde durch meine Anpassungsfähigkeit sowie herausragende
+        analytische und Teamfähigkeiten ermöglicht. Jetzt strebe ich eine neue
         Herausforderung als Senior Engineer an, um meine Expertise in
-        Simulation in innovative Mobilit{\"a}tsl{\"o}sungen einzubringen.
+        Simulation in innovative Mobilit{\"a}tsl{\"o}sungen einzubringen.\\
     } 
     { 
 
@@ -133,14 +132,25 @@
 
         \begin{minipage}[c]{0.31\textwidth}
             \begin{flushright}
-                {\bfseries Medium}\\
-                {\footnotesize \href{https://chandramoulig.medium.com}{\link{chandramoulig.medium.com}}}
+                {\bfseries GitHub}\\
+                {\footnotesize \href{https://github.com/chandramouli6890/}{\link{github.com/chandramouli6890}}}
             \end{flushright}
         \end{minipage}
         \begin{minipage}{0.05\textwidth}
-            \mediumIcon
+            \githubIcon
         \end{minipage}
         \vspace{3mm}
+
+        % \begin{minipage}[c]{0.31\textwidth}
+        %     \begin{flushright}
+        %         {\bfseries Medium}\\
+        %         {\footnotesize \href{https://chandramoulig.medium.com}{\link{chandramoulig.medium.com}}}
+        %     \end{flushright}
+        % \end{minipage}
+        % \begin{minipage}{0.05\textwidth}
+        %     \mediumIcon
+        % \end{minipage}
+        % \vspace{3mm}
 
         \begin{minipage}[c]{0.31\textwidth}
             \begin{flushright}
@@ -154,48 +164,11 @@
         \end{minipage}
 
 \switchcolumn
-\ifthenelse{\boolean{GERMAN_CV}}
-{
-    \rsection{Ausbildung}
-        \subsection{May 2016 - April 2021}{Promotion zum
-        Dr.-Ing.}{Universit{\"a}t Stuttgart}, {Abschlussnote: 1.0 ({\bfseries Magna cum
-        laude})}
-          \begin{itemize}
-              \item Dissertationstitel: Particle Dampers- Enhancing
-                  Energy Dissipation using Fluid/Solid Interactions and Rigid
-                  Obstacle-Grids
-          \end{itemize}
-        
-        \subsection{Oktober 2012 - April 2016}{Master of Science in Commercial
-        Vehicle Technology}{Technische Universit{\"a}t Kaiserslautern,
-        {Abschlussnote: 1.9}}\\
-        
-        \subsection{Juni 2008 - April 2012}{Bachelor of Engineering in
-        Fertigunstechnik} {Anna University, Chennai, Indien, {Abschlussnote:
-        8.3/10} ({\bfseries sehr gut})}\\
-
-}
-{
-    \rsection{Educational Qualification}
-        \subsection{May 2016 - April 2021}{Ph.D. in Mechanical Engineering}
-        {University of Stuttgart}
-          \begin{itemize}
-              \item Dissertation Titel: Particle Dampers- Enhancing
-                  Energy Dissipation using Fluid/Solid Interactions and Rigid
-                  Obstacle-Grids
-          \end{itemize}
-
-        \subsection{October 2012 - April 2016}{Master of Science in Commercial Vehicle
-        Technology}{Technical University of Kaiserslautern, {Grade: 1.9}}\\
-
-        \subsection{June 2008 - April 2012}{Bachelor of Engineering in
-            Production Engineering}{Anna University, Chennai, India, {Grade CGPA: 8.3/10}}\\
-}
 
 \ifthenelse{\boolean{GERMAN_CV}}
 {
     \rsection{Beruflicher Werdegang}
-    \subsection{April 2023 - heute}{Torc Europe GmbH, Stuttgart}{Staff software engineer}
+    \subsection{April 2023 - heute}{Torc Europe GmbH, Stuttgart}{\bfseries Staff Software Engineer}
           \begin{itemize}
 
             \item Leitung eines Teams zur Entwicklung eines skalierbaren
@@ -203,28 +176,43 @@
                 objektorientierter Programmierung (OOP).
 
             \item Integration von Fahrzeugmodellen in einen ROS-basierten
-                Simulator zur virtuellen Validierung von Level-4 autonome LKWs. 
+                Simulator zur virtuellen Validierung von Level-4 autonomen LKWs. 
 
             \item Zusammenarbeit mit externen Partnern, um eine skalierbare
                 Qualifizierungsstrategie für Fahrzeugmodelle gem{\"a}{\ss} den
                 ISO-26262 zu entwickeln.
           \end{itemize}
      
-          \subsection{August 2021 - M{\"a}rz 2023}{Daimler Truck AG, Stuttgart}{Entwicklungsingenieur, Autonomous Technology Group}
+          \subsection{August 2021 - M{\"a}rz 2023}{Daimler Truck AG, Stuttgart}{{\bfseries Entwicklungsingenieur}, Autonomous Technology Group}
            \begin{itemize}
-               \item Entwicklung Fahrzeugmodelle mit unterschiedlichem
+               \item Entwicklung von Fahrzeugmodelle mit unterschiedlichem
                    Detailierungsgrad f{\"u}r skalierbare Simulationen in MATLAB/Simulink.
 
                \item Entwicklung einer C++ Co-Simulations-Schnittstelle zur
                    Kopplung eines hochdetaillierten Mehrk{\"o}rpermodells mit
                    einem virtuellen Fahrer für hochdynamischen
                    Man{\"o}versimulationen.
-
            \end{itemize}
+
+        \subsection{Mai 2016 - April 2021}{Universit{\"a}t
+            Stuttgart}{{\bfseries Wissenschaftlicher Mitarbeiter} am Institut f{\"u}r
+            technische und numerische Mechanik (ITM)}
+           \begin{itemize}
+               \item Entwicklung \& Administration der Partikelsimulationssoftware
+                   Pasimodo in C++.
+               \item Planung und Durchf{\"u}hrung von Analysen
+                   schwingungsbehafteter Systeme mit Laset-Doppler Vibrometer.
+               \item Organisation und Durchf{\"u}hrung von Veranstaltungen f{\"u}r
+                   die Vorlesung "Fahrzeugdunamik" und Durchf{\"u}hrung von
+                   Laborpraktika.
+           \end{itemize}
+
+        \subsection{October 2015 - April 2016}{Fraunhofer Institute (ITWM), Kaiserslautern}
+            {{\bfseries Werkstudent} in der Abteilung Mathe. für die Fahrzeugentwicklung}\\
 }
 {
     \rsection{Professional Career}
-    \subsection{April 2023 - present}{Torc Europe GmbH, Stuttgart}{Staff software engineer}
+    \subsection{April 2023 - present}{Torc Europe GmbH, Stuttgart}{{\bfseries Staff Software Engineer}}
           \begin{itemize}
             \item Spearheaded a team develop a highly-scalable
                 vehicle model in C++ following Test-Driven Development
@@ -236,8 +224,6 @@
                 Collaborated with external stakeholders to develop a scalable
                 validation strategy for vehicle models as per
                 ISO-26262.
-
-
           \end{itemize}
     
     \subsection{August 2021 - March 2023}{Daimler Truck AG, Stuttgart}{Vehicle model engineer}
@@ -250,6 +236,12 @@
                 TCP/IP communication interface.
 
           \end{itemize}
+
+    \subsection{May 2016 - April 2021}{University of Stuttgart}{{\bfseries Scientific Staff} at the institute for engineering and
+        computational \quad\quad mechanics (ITM)}
+
+    \subsection{October 2015 - April 2016}{Fraunhofer Institute (ITWM), Kaiserslautern}
+        {{\bfseries Intern} in the department of mathematics for vehicle engineering}\\
 }
 \end{paracol}
 
@@ -258,40 +250,60 @@
     \switchcolumn
     \ifthenelse{\boolean{GERMAN_CV}}
     {
-        \rsection{Beruflicher Werdegang (Fortsetzung)}
-        \subsection{Mai 2016 - April 2021}{Universit{\"a}t
-        Stuttgart}{Wissenschaftlicher Mitarbeiter am Institut f{\"u}r
-        technische und numerische Mechanik (ITM)}\\
-
-        \subsection{October 2015 - April 2016}{Fraunhofer Institute (ITWM), Kaiserslautern}
-            {Werkstudent in der Abteilung Mathematik für die Fahrzeugentwicklung}\\
+        \rsection{Ausbildung}
+            \ausbildung{Mai 2016 - April 2021}{Promotion zum
+            Dr.-Ing.}{Universit{\"a}t Stuttgart}, {Abschlussnote: 1.0 ({\bfseries Magna cum
+            laude})}
+              \begin{itemize}
+                  \item Dissertationstitel: Particle Dampers - Enhancing
+                      Energy Dissipation using Fluid/Solid Interactions and Rigid
+                      Obstacle-Grids
+              \end{itemize}
+            
+            \ausbildung{Oktober 2012 - April 2016}{Master of Science in Commercial
+            Vehicle Technology}{Technische Universit{\"a}t Kaiserslautern,
+            {Abschlussnote: 1.9}}\\
+            
+            \ausbildung{Juni 2008 - April 2012}{Bachelor of Engineering in
+            Fertigunstechnik} {Anna University, Chennai, Indien, {Abschlussnote:
+            8.3/10} ({\bfseries sehr gut})}\\
+    
     }
     {
-        \rsection{Professional Career (continued)}
-        \subsection{May 2016 - April 2021}{University of Stuttgart}{Scientific staff at the institute for engineering and
-            computational \quad\quad mechanics (ITM)}
-        \subsection{October 2015 - April 2016}{Fraunhofer Institute (ITWM), Kaiserslautern}
-            {Intern in the department of mathematics for vehicle engineering}\\
+        \rsection{Educational Qualification}
+            \ausbildung{May 2016 - April 2021}{Ph.D. in Mechanical Engineering}
+            {University of Stuttgart}
+              \begin{itemize}
+                  \item Dissertation Titel: Particle Dampers - Enhancing
+                      Energy Dissipation using Fluid/Solid Interactions and Rigid
+                      Obstacle-Grids
+              \end{itemize}
+    
+            \ausbildung{October 2012 - April 2016}{Master of Science in Commercial Vehicle
+            Technology}{Technical University of Kaiserslautern, {Grade: 1.9}}\\
+    
+            \subsection{June 2008 - April 2012}{Bachelor of Engineering in
+                Production Engineering}{Anna University, Chennai, India, {Grade CGPA: 8.3/10}}\\
     }
     
     \ifthenelse{\boolean{GERMAN_CV}}
     {
         \rsection{Technische Qualifikationen}
-        \begin{doublespace}
+        \begin{onehalfspace}
             \begin{tabular}{p{5cm}!{\color{templateColor1}\vrule}p{6.5cm}}
             {\bfseries Programmiersprachen: } & {\bfseries Betriebssystem:}\\
-            {\mybox\mybox\mybox\mybox\mybox 9 Jahre | C/C++}  &
+            {\mybox\mybox\mybox\mybox\mybox 12 Jahre | C/C++}  &
             {\mybox\mybox\mybox\mybox\mybox Linux (Debian, Ubuntu)}\\
-            {\mybox\mybox\mybox\mybox\mybox 9 Jahre | MATLAB} & 
+            {\mybox\mybox\mybox\mybox\mybox 12 Jahre | MATLAB} & 
             {\mybox\mybox\mybox\mybox\myboxo Microsoft Windows}\\
-            {\mybox\mybox\mybox\mybox\myboxo 9 Jahre | BASH}  & \\
+            % {\mybox\mybox\mybox\mybox\myboxo 9 Jahre | BASH}  & \\
             {\mybox\mybox\mybox\myboxo\myboxo 6 Jahre | Python}  & \\
         \end{tabular}\vspace{4mm}
-        \end{doublespace}
+        \end{onehalfspace}
     }
     {
         \rsection{Technical Skills}
-        \begin{doublespace}
+        \begin{onehalfspace}
             \begin{tabular}{p{5cm}!{\color{templateColor1}\vrule}p{6.5cm}}
             {\bfseries Programming Languages: } & {\bfseries Operating System:}\\
             {\mybox\mybox\mybox\mybox\mybox 12 years | C/C++}  &
@@ -301,7 +313,7 @@
             {\mybox\mybox\mybox\mybox\myboxo 9 years | BASH}  & \\
             {\mybox\mybox\mybox\myboxo\myboxo 6 years | Python}  & \\
         \end{tabular}\vspace{4mm}
-        \end{doublespace}
+        \end{onehalfspace}
     }
 
     \ifthenelse{\boolean{GERMAN_CV}}
@@ -313,7 +325,7 @@
             \item {\bfseries C/C++:} MEX API, SilverBypass, FMI, ROS, TCP/IP and UDP
             \item{\bfseries Mehrk{\"o}rpersimulation:}  LMS Virtual.Lab Motion, Neweul-M$^2$, 
                 MSC Adams, Project Chrono
-            \item{\bfseries ADAS/AD-Simulationen:} Applied Object-Sim, IPG CarMaker, IPG TruckMaker
+            \item{\bfseries ADAS/AD-Simulationen:} Applied Object-Sim, IPG CarMaker
             \item {\bfseries sonstige Programme:}  Silver Virtual-ECU, COMSOL
                 Multiphysics, OptiSlang, Oracle VM VirtualBox
         \end{itemize} \par
@@ -323,7 +335,7 @@
             \item {\bfseries CI Tools:} Git, Github CLI, Jenkins, Docker\par
             \item {\bfseries Technologien:} PETSc, EIGEN, OpenGL\par
             \item {\bfseries Debuggers/Profilers:} {\verb|gdb}, {\verb|valgrind}, {\verb|calgrind},
-                Intel VTune\\
+                Intel VTune
         \end{itemize}
     }
     {
@@ -435,7 +447,7 @@
     % {\bfseries Gnanasambandham}, C.; Sch{\"onle}, A.; Eberhard, P.: Investigating
     % the Dissipative Effects of Liquid Filled PDs using Coupled DEM-SPH
     % Methods. Computational Particle Mechanic, Vol. 6, pp. 257-169, 2019.\\
-    % }
+    }
 }
 \end{paracol}
 
@@ -446,11 +458,11 @@
 \end{figure}
 \ifthenelse{\boolean{GERMAN_CV}}
 {
-    \vspace{-0.7cm}\hspace{5.5cm} Stuttgart, den 25. November 2024 \quad \hrulefill\\
+    \vspace{-0.7cm}\hspace{5.5cm} Stuttgart, den 27. November 2024 \quad \hrulefill\\
 }
 {
     \vspace{-0.7cm}\hspace{5.5cm} Stuttgart, \today \quad \hrulefill\\
 }
-\raggedleft Dr.-Ing Chandramouli Gnanasambandham
+\raggedleft Dr.-Ing. Chandramouli Gnanasambandham
 
 \end{document} 

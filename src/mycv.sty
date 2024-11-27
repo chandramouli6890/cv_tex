@@ -182,8 +182,11 @@
 %{#1 {#2}}
 %\titlespacing*{\subsection}{0mm}{2mm}{2mm}
 
+\renewcommand{\ausbildung}[3]{#1\\
+\rlap{\begin{picture}(10,10)\put(-11,-3){\mytriangle{templateColor4}}\end{picture}}{\bfseries#2}\\{#3}}
+
 \renewcommand{\subsection}[3]{#1\\
-	\rlap{\begin{picture}(10,10)\put(-11,-3){\mytriangle{templateColor4}}\end{picture}}{\bfseries#2}\\#3}
+\rlap{\begin{picture}(10,10)\put(-11,-3){\mytriangle{templateColor4}}\end{picture}}{\bfseries#2}\\{#3}}
 
 % -----------------------------------------------------------------------------
 \newrobustcmd*{\mybox}[]{\tikz{\filldraw[draw=templateColor1,fill=templateColor4]
