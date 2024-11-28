@@ -1,7 +1,6 @@
 % SOME GENERAL PACKAGES -------------------------------------------------------
 \usepackage[margin=1.0cm, a4paper]{geometry}
 \setlength{\parindent}{0cm} % set para indentation
-%\renewcommand{\baselinestretch}{1.5}
 \linespread{1.1}
 \usepackage{lipsum}
 \usepackage{etoolbox}
@@ -9,12 +8,12 @@
 \usepackage{ragged2e}
 \usepackage{setspace}% changes linespaceing within a DOUBLESPACING environment
 \usepackage[official]{eurosym} % symbold for EUR
-%\usepackage[german]{babel}
 \usepackage{datetime}
 \usepackage{svg} % to include svg images
 \svgpath{{../icons/}}
 \usepackage{colortbl} % needed to apply colored divider lines in TABULAR
 \usepackage{import} 
+\usepackage{tabularx}
 
 % SOME TIKZ STUFF -------------------------------------------------------------
 \usepackage{tikz}
@@ -31,6 +30,7 @@
 
 % blue color palatte
 \definecolor{templateColor1}{HTML}{3c3c3c}
+\definecolor{templateColor3}{HTML}{c0d7f0}
 \definecolor{templateColor4}{HTML}{77a4d4}
 \definecolor{templateColor5}{HTML}{3873b3}
 
@@ -152,14 +152,10 @@
   {\color{templateColor4}\rule[\ulinespace]{0.184\textwidth}{\ulinewidth}}
 }
 
-%\newcommand{\lsection}[1]
-%{\noindent\begin{flushright}\vspace{-1.1mm}\Large{#1 \hspace*{5pt}}\end{flushright}\lcoluline}
 \newcommand{\lsection}[1]
 {{\RaggedLeft\large{\bfseries #1}\\}\lcoluline\par}
 \newcommand{\rsection}[1]
 {{\RaggedRight\large{\bfseries #1}\\}\rcoluline\par}
-%\newcommand{\rsection}[1]
-%{\noindent\begin{flushleft}\vspace{-1.1mm}\Large{#1}\end{flushleft}\rcoluline}
 
 % REDEFINE SECTION ------------------------------------------------------------
 % inspired from the following stackExchange post which uses TITLESEC pkg
@@ -168,25 +164,27 @@
 \newrobustcmd*{\mytriangle}[1]{\tikz{\filldraw[draw=#1,fill=#1] (0,0) --
 (0mm,4.0mm) -- (1.6mm,2.0mm);}}
 
-%\titleformat{\section}[hang]{\Large\sffamily}%
-%{\rlap{\color{templateColor5}\rule[-5pt]{0.4\textwidth}{\ulinewidth}\noindent
-%\color{templateColor1}\rule[-5pt]{0.6\textwidth}{\ulinewidth}}
-%}
-%{0pt}
-%{#1}
-%\titlespacing*{\section}{0mm}{1mm}{5mm}
-
-%\titleformat{\subsection}[hang]{\large\sffamily}%
-%{\rlap{\begin{picture}(10,10)\put(-10,-2){\mytriangle{templateColor1}}\end{picture}}}
-%{5pt}
-%{#1 {#2}}
-%\titlespacing*{\subsection}{0mm}{2mm}{2mm}
-
 \renewcommand{\ausbildung}[3]{#1\\
 \rlap{\begin{picture}(10,10)\put(-11,-3){\mytriangle{templateColor4}}\end{picture}}{\bfseries#2}\\{#3}}
 
-\renewcommand{\subsection}[3]{#1\\
-\rlap{\begin{picture}(10,10)\put(-11,-3){\mytriangle{templateColor4}}\end{picture}}{\bfseries#2}\\{#3}}
+\renewcommand{\subsection}[3]
+{
+    \begin{picture}
+        (-3,0)\put(-11,-3){\mytriangle{templateColor4}}
+    \end{picture}
+    \begin{minipage}[t]{0.4\textwidth}
+        \raggedright
+        \setlength{\parindent}{0pt}
+        #3
+    \end{minipage}\hspace{0pt}
+    \begin{minipage}[]{0.1\textwidth}
+        \raggedleft
+        \setlength{\parindent}{0pt}
+        \colorbox{templateColor3}{\bfseries {#1}}
+    \end{minipage}
+    \\
+    {#2}
+}
 
 % -----------------------------------------------------------------------------
 \newrobustcmd*{\mybox}[]{\tikz{\filldraw[draw=templateColor1,fill=templateColor4]
@@ -202,7 +200,6 @@ rectangle(1.8mm,1.8mm)} \,}
 \end{tabular}\end{minipage}\vspace{1em}%
 }
 
-% \cvitem{<Item/Skill:SMALLCAPS>}{<Beschreibung>} 
 \newcommand{\cvitem}[2]{%
   \textsc{#1} & {#2}\\}
 
