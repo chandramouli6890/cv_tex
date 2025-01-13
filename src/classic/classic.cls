@@ -4,4 +4,4 @@
 \LoadClass[]{article}
 \RequirePackage{xcolor}
 
-\usepackage{mycv}
+\usepackage{classic}

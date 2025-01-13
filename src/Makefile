@@ -1,34 +1,23 @@
-PAPER=main
+SRC_FOLDER=src
+CV_TYPE=classic
+FOLDER=$(SRC_FOLDER)/$(CV_TYPE)
 SHELL=/bin/bash
 
 # Targets
-.PHONY: all cv_german cv_english clean watch
+.PHONY: all cv_classic_german cv_classic_english clean
 
-.IGNORE: cv_german cv_english
+.IGNORE: cv_classic_german cv_english
 
 # Default target: compile
-all: cv_german 
+all: cv_classic_german 
 
-cv_german:  ## Compile paper
-	echo "\newboolean{GERMAN_CV}\setboolean{GERMAN_CV}{true}" > language_config.tex
-	pdflatex -synctex=1 -shell-escape -src-specials --interaction=nonstopmode $(PAPER) & bibtex $(PAPER)& pdflatex -synctex=1 -shell-escape -src-specials --interaction=nonstopmode $(PAPER)
-	rm language_config.tex
-	cp $(PAPER).pdf Gnanasambandham_CV_Deutsch.pdf
+cv_classic_german:
+	make -C $(FOLDER) cv_german
+	cp $(FOLDER)/main.pdf Gnanasambandham_CV_$(CV_TYPE)_Deutsch.pdf
 
-cv_english:  ## Compile paper
-	echo "\newboolean{GERMAN_CV}\setboolean{GERMAN_CV}{false}" > language_config.tex
-	pdflatex -synctex=1 -shell-escape -src-specials --interaction=nonstopmode $(PAPER) & bibtex $(PAPER)& pdflatex -synctex=1 -shell-escape -src-specials --interaction=nonstopmode $(PAPER)
-	rm language_config.tex
-	cp $(PAPER).pdf Gnanasambandham_CV_English.pdf
+cv_classic_english:
+	make -C $(FOLDER) cv_english
+	cp $(FOLDER)/main.pdf Gnanasambandham_CV_$(CV_TYPE)_English.pdf
 
-clean: 
-	rm -rf $(PAPER).aux
-	rm -rf $(PAPER).fdb_latexmk
-	rm -rf $(PAPER).fls
-	rm -rf $(PAPER).log
-	rm -rf $(PAPER).out
-	rm -rf $(PAPER).pdf
-	rm -rf $(PAPER).synctex.gz
-
-watch:  ## Recompile on updates to the source file
-	@while [ true ]; do inotifywait $(PAPER).tex; sleep 0.01; make all; done
+clean:
+	make -C $(FOLDER) clean
