@@ -7,3 +7,6 @@
 *.gz
 *.fls
 *.fdb_latexmk
+
+# temprorary build files
+src/classic/main.pdf
