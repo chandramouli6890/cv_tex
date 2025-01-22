@@ -17,5 +17,9 @@ cv_classic_english:
 	make -C src/classic cv_english
 	cp src/classic/main.pdf Gnanasambandham_CV_classic_English.pdf
 
+cv_noprofilephoto:
+	make -C src/noprofilephoto cv_noprofilephoto
+	cp src/noprofilephoto/main.pdf Gnanasambandham_CV_noprofilephoto_English.pdf
+
 clean:
 	make -C src/$(CV_TYPE) clean
