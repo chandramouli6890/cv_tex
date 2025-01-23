@@ -19,6 +19,9 @@ cv_english:
 	pdflatex -synctex=1 -shell-escape -src-specials --interaction=nonstopmode $(PAPER) & bibtex $(PAPER)& pdflatex -synctex=1 -shell-escape -src-specials --interaction=nonstopmode $(PAPER)
 	rm language_config.tex
 
+anschreiben:
+	pdflatex -synctex=1 -shell-escape -src-specials --interaction=nonstopmode anschreiben && bibtex anschreiben && pdflatex -synctex=1 -shell-escape -src-specials --interaction=nonstopmode anschreiben
+
 clean: 
 	rm -rf $(PAPER).aux
 	rm -rf $(PAPER).fdb_latexmk
