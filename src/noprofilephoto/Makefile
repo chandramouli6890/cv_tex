@@ -12,6 +12,9 @@ all: cv_noprofilephoto
 cv_noprofilephoto:
 	pdflatex -synctex=1 -shell-escape -src-specials --interaction=nonstopmode $(PAPER) && bibtex $(PAPER) && pdflatex -synctex=1 -shell-escape -src-specials --interaction=nonstopmode $(PAPER)
 
+anschreiben:
+	pdflatex -synctex=1 -shell-escape -src-specials --interaction=nonstopmode anschreiben && bibtex coverletter && pdflatex -synctex=1 -shell-escape -src-specials --interaction=nonstopmode anschreiben
+
 coverletter:
 	pdflatex -synctex=1 -shell-escape -src-specials --interaction=nonstopmode coverletter && bibtex coverletter && pdflatex -synctex=1 -shell-escape -src-specials --interaction=nonstopmode coverletter
 
