@@ -9,4 +9,5 @@
 *.fdb_latexmk
 
 # temprorary build files
-src/classic/main.pdf
+src/classic/*.pdf
+src/noprofilephoto/*.pdf
